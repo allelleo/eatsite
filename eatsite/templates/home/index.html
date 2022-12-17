@@ -1,0 +1,893 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Main Top Bar -->
+    <!-- Featured Wrapper -->
+    <div class='row' id='hot-wrapper'>
+        <div class='section' id='hot-section' name='Hot Posts'>
+            <div class='widget PopularPosts' data-version='2' id='PopularPosts1'>
+                <div class='widget-content'>
+                    <ul class='hot-posts multiple'>
+                        <li class='hot-item item-0'>
+                            <div class='hot-item-inner'>
+                                <div class='post-image-wrap'>
+                                    <a class='post-image-link'
+                                       href='#'>
+                                        <img alt='Рецепты салатов' class='post-thumb'
+                                             src="{% static 'images/HomePage/salat.png' %}"/>
+                                    </a>
+                                    <div class='post-info'>
+                                        <span class='post-tag'>Салаты</span>
+                                        <h2 class='post-title'>
+                                            <a href='2022/08/business-agencies-conference-highlights.html'>Найдите свой
+                                                любимый салат!</a>
+                                        </h2>
+                                        <p class='post-snippet'>Тут собранно огромное количество рецептов салатов на
+                                            любой случай жизни!</p>
+                                        <div class='post-meta'>
+                                            <span class='post-author'><a
+                                                    href='https://www.blogger.com/profile/16413293425780700748'
+                                                    target='_blank'
+                                                    title='Sora Blogging Tips'>{{ SiteName }}</a></span><span
+                                                class='post-date published'>{{ SalatRecipeCounter }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='hot-item item-1'>
+                            <div class='hot-item-inner'>
+                                <a class='post-image-link' href='2018/05/how-ads-may-influence-your-business-to.html'>
+                                    <img alt='Рецепты рыбы' class='post-thumb'
+                                         src="{% static 'images/HomePage/riba.png' %}"/>
+                                </a>
+                                <div class='post-info'>
+                                    <span class='post-tag'>Рыба</span>
+                                    <h2 class='post-title'>
+                                        <a href='2018/05/how-ads-may-influence-your-business-to.html'>Приготовьте свою
+                                            любимую рыбку!</a>
+                                    </h2>
+                                    <div class='post-meta'>
+                                        <span class='post-date published'>{{ FishRecipeCounter }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='hot-item item-2'>
+                            <div class='hot-item-inner'>
+                                <a class='post-image-link' href='2022/06/healthy-daily-rutine-for-your-healthy.html'>
+                                    <img alt='Рецепты курицы' class='post-thumb'
+                                         src="{% static 'images/HomePage/kurica.png' %}"/>
+                                </a>
+                                <div class='post-info'>
+                                    <span class='post-tag'>Курица</span>
+                                    <h2 class='post-title'>
+                                        <a href='2022/06/healthy-daily-rutine-for-your-healthy.html'>У нас много
+                                            рецептов вкусной курочки!!</a>
+                                    </h2>
+                                    <div class='post-meta'>
+                                        <span class='post-date published'>{{ ChickenRecipeCounter }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='hot-item item-3'>
+                            <div class='hot-item-inner'>
+                                <a class='post-image-link' href='2022/06/perfect-photo-clicking-idea-you-must.html'>
+                                    <img alt='Рецепты мяса' class='post-thumb'
+                                         src="{% static 'images/HomePage/maso.png' %}"/>
+                                </a>
+                                <div class='post-info'>
+                                    <span class='post-tag'>Мясо</span>
+                                    <h2 class='post-title'>
+                                        <a href='2022/06/perfect-photo-clicking-idea-you-must.html'>Очень вкусное мясо,
+                                            ты только посмотри!</a>
+                                    </h2>
+                                    <div class='post-meta'>
+                                        <span class='post-date published'>{{ MeatRecipeCounter }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='row' id='hot-wrapper'>
+        <div class='section' id='hot-section' name='Hot Posts'>
+            <div class='widget PopularPosts' data-version='2' id='PopularPosts1'>
+                <div class='widget-content'>
+                    <ul class='hot-posts multiple'>
+                        <li class='hot-item item-0'>
+                            <div class='hot-item-inner'>
+                                <a class='post-image-link' href='2018/05/how-ads-may-influence-your-business-to.html'>
+                                    <img alt='Рецепты правильного питания' class='post-thumb'
+                                         src={% static 'images/HomePage/zdorovaya.png' %}/>
+                                </a>
+                                <div class='post-info'>
+                                    <span class='post-tag'>Диета</span>
+                                    <h2 class='post-title'>
+                                        <a href='2018/05/how-ads-may-influence-your-business-to.html'>Здоровая и
+                                            правильная пища!</a>
+                                    </h2>
+                                    <div class='post-meta'>
+                                        <span class='post-date published'>{{ ProperNutritionRecipeCounter }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='hot-item item-0'>
+                            <div class='hot-item-inner'>
+                                <a class='post-image-link' href='2022/06/healthy-daily-rutine-for-your-healthy.html'>
+                                    <img alt='Рецепты кофе' class='post-thumb'
+                                         src={% static 'images/HomePage/kofe.png' %}/>
+                                </a>
+                                <div class='post-info'>
+                                    <span class='post-tag'>Кофе</span>
+                                    <h2 class='post-title'>
+                                        <a href='2022/06/healthy-daily-rutine-for-your-healthy.html'>Сделать вкусный
+                                            кофе - это искусство</a>
+                                    </h2>
+                                    <div class='post-meta'>
+                                        <span class='post-date published'>{{ CoffeeRecipeCounter }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='row' id='hot-wrapper'>
+        <div class='section' id='hot-section' name='Hot Posts'>
+            <div class='widget PopularPosts' data-version='2' id='PopularPosts1'>
+                <div class='widget-content'>
+                    <ul class='hot-posts multiple'>
+                        <li class='hot-item item-1'>
+                            <div class='hot-item-inner'>
+                                <a class='post-image-link' href='2018/05/how-ads-may-influence-your-business-to.html'>
+                                    <img alt='Случайная подборка рецептов' class='post-thumb'
+                                         src={% static 'images/HomePage/zdorovaya.png' %}/>
+                                </a>
+                                <div class='post-info'>
+                                    <span class='post-tag'>Рецепты</span>
+                                    <h2 class='post-title'>
+                                        <a href='2018/05/how-ads-may-influence-your-business-to.html'>Случайная подборка
+                                            рецептов</a>
+                                    </h2>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class='hot-item item-1'>
+                            <div class='hot-item-inner'>
+                                <a class='post-image-link' href='2022/06/healthy-daily-rutine-for-your-healthy.html'>
+                                    <img alt='Рецепты разных напитков' class='post-thumb'
+                                         src={% static 'images/HomePage/napitki.png' %}/>
+                                </a>
+                                <div class='post-info'>
+                                    <span class='post-tag'>Напитки</span>
+                                    <h2 class='post-title'>
+                                        <a href='2022/06/healthy-daily-rutine-for-your-healthy.html'>По моему звучит интересно, нет?)</a>
+                                    </h2>
+                                    <div class='post-meta'>
+                                        <span class='post-date published'>{{ DrinkRecipeCounter }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='hot-item item-3'>
+                            <div class='hot-item-inner'>
+                                <a class='post-image-link' href='2022/06/perfect-photo-clicking-idea-you-must.html'>
+                                    <img alt='Рецепты чая' class='post-thumb'
+                                         src={% static 'images/HomePage/chai.png' %}/>
+                                </a>
+                                <div class='post-info'>
+                                    <span class='post-tag'>Чай</span>
+                                    <h2 class='post-title'>
+                                        <a href='2022/06/perfect-photo-clicking-idea-you-must.html'>Чай любят все,
+                                            особенно если он вкусный</a>
+                                    </h2>
+                                    <div class='post-meta'>
+                                        <span class='post-date published'>{{ TeaRecipeCounter }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='hot-item item-4'>
+                            <div class='hot-item-inner'>
+                                <a class='post-image-link' href='2022/06/perfect-photo-clicking-idea-you-must.html'>
+                                    <img alt='Рецепты супов' class='post-thumb'
+                                         src={% static 'images/HomePage/sup.png' %}/>
+                                </a>
+                                <div class='post-info'>
+                                    <span class='post-tag'>Суп</span>
+                                    <h2 class='post-title'>
+                                        <a href='2022/06/perfect-photo-clicking-idea-you-must.html'>Суп - это очень
+                                            вкусно</a>
+                                    </h2>
+                                    <div class='post-meta'>
+                                        <span class='post-date published'>{{ SoupRecipeCounter }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='hot-item item-5'>
+                            <div class='hot-item-inner'>
+                                <a class='post-image-link' href='2022/06/perfect-photo-clicking-idea-you-must.html'>
+                                    <img alt='Быстрые рецепты' class='post-thumb'
+                                         src={% static 'images/HomePage/perecus.png' %}/>
+                                </a>
+                                <div class='post-info'>
+                                    <span class='post-tag'>Перекус</span>
+                                    <h2 class='post-title'>
+                                        <a href='2022/06/perfect-photo-clicking-idea-you-must.html'>Если надо быстро
+                                            приготовить, покушать и пойти по своим делам</a>
+                                    </h2>
+                                    <div class='post-meta'>
+                                        <span class='post-date published'>{{ SnackRecipeCounter }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='hot-item item-6'>
+                            <div class='hot-item-inner'>
+                                <a class='post-image-link' href='2022/06/perfect-photo-clicking-idea-you-must.html'>
+                                    <img alt='Рецепты сладкого' class='post-thumb'
+                                         src={% static 'images/HomePage/sladosti.png' %}/>
+                                </a>
+                                <div class='post-info'>
+                                    <span class='post-tag'>Сладости</span>
+                                    <h2 class='post-title'>
+                                        <a href='2022/06/perfect-photo-clicking-idea-you-must.html'>Вкусняшки для себя
+                                            любимого своими руками</a>
+                                    </h2>
+                                    <div class='post-meta'>
+                                        <span class='post-date published'>{{ SweetRecipeCounter }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Breaking Wrapper -->
+
+    <!-- Content Wrapper -->
+    <div class='row' id='content-wrapper'>
+        <div class='container'>
+            <!-- Main Wrapper -->
+            <div id='main-wrapper'>
+                <div class='main section' id='main' name='Main Posts'>
+                    <div class='widget Blog' data-version='2' id='Blog1'>
+
+                        <div class='clearfix'></div>
+                        <div class='blog-posts hfeed container index-post-wrap'>
+                            <div class='grid-posts'>
+                                <div class='blog-post hentry index-post post-0'>
+                                    <div class='post-image-wrap'>
+                                        <a class='post-image-link'
+                                           href='2022/08/business-agencies-conference-highlights.html'>
+                                            <img alt='Business Agencies Conference Highlights' class='post-thumb'
+                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
+                                        </a>
+                                    </div>
+                                    <div class='post-info'>
+                                        <a class='post-tag' href='search/label/business.html'>
+                                            business
+                                        </a>
+                                        <h2 class='post-title'>
+                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
+                                                Agencies Conference Highlights</a>
+                                        </h2>
+                                        <div class='index-post-footer'>
+                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
+                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
+                                                sta&#8230;</p>
+                                            <div class='post-meta'>
+                                                <span class='post-author'><a
+                                                        href='https://www.blogger.com/profile/16413293425780700748'
+                                                        target='_blank'
+                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
+                                                <span class='post-date published' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022</span>
+                                            </div>
+                                            <a class='read-more'
+                                               href='2022/08/business-agencies-conference-highlights.html'><span>Read more</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='blog-post hentry index-post post-1'>
+                                    <div class='post-image-wrap'>
+                                        <a class='post-image-link'
+                                           href='2018/05/how-ads-may-influence-your-business-to.html'>
+                                            <img alt='How Ads May Influence your business to grow' class='post-thumb'
+                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmwRU0uTMyV4SXAuBwXohg_vEWRHcjZ_QHWPyUFdr6STLDqeteAsJn_MBsH9wDtUeJV9wwVPHyUSUsXYCQ7-g3YfFjeTGCZ0o_bGnu04tf2WCJ0qkH__7SXYXXIJdfwJuAyzlC_JzDAc-0c-TrWcba-mWMW1zM9IJ5-mlgX21CJpDjFKmbIR0aJxd-/w72-h72-p-k-no-nu/6.jpg'/>
+                                        </a>
+                                    </div>
+                                    <div class='post-info'>
+                                        <a class='post-tag' href='search/label/Design.html'>
+                                            Design
+                                        </a>
+                                        <h2 class='post-title'>
+                                            <a href='2018/05/how-ads-may-influence-your-business-to.html'>How Ads May
+                                                Influence your business to grow</a>
+                                        </h2>
+                                        <div class='index-post-footer'>
+                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
+                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
+                                                sta&#8230;</p>
+                                            <div class='post-meta'>
+                                                <span class='post-author'><a
+                                                        href='https://www.blogger.com/profile/16413293425780700748'
+                                                        target='_blank'
+                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
+                                                <span class='post-date published' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022</span>
+                                            </div>
+                                            <a class='read-more'
+                                               href='2018/05/how-ads-may-influence-your-business-to.html'><span>Read more</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='blog-post hentry index-post post-2'>
+                                    <div class='post-image-wrap'>
+                                        <a class='post-image-link'
+                                           href='2022/06/healthy-daily-rutine-for-your-healthy.html'>
+                                            <img alt='Healthy Daily Rutine For Your Healthy Lifestyle'
+                                                 class='post-thumb'
+                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhin41Ik8HLf4JCPF2hnR5XPQnBARAgHwxr8hUaDeRa8OMoX0fabe_gjdRUBu3accEP58xzgPLGcQRv9Z5-yggjsuXIZEmlsbsGCBZWm4xpkydtT3RatfkVqW0FZzpYDTzVJvlQd25LjNEet4NqY-nn76bi4qiHZPOIQQc146f1eFDm8qfdlRBEUqQp/w72-h72-p-k-no-nu/12.jpg'/>
+                                        </a>
+                                    </div>
+                                    <div class='post-info'>
+                                        <a class='post-tag' href='search/label/Health.html'>
+                                            Health
+                                        </a>
+                                        <h2 class='post-title'>
+                                            <a href='2022/06/healthy-daily-rutine-for-your-healthy.html'>Healthy Daily
+                                                Rutine For Your Healthy Lifestyle</a>
+                                        </h2>
+                                        <div class='index-post-footer'>
+                                            <p class='post-snippet'>left-sidebar Lorem Ipsum is simply dummy text of the
+                                                printing and typesetting industry. Lorem Ipsum has been the
+                                                indus&#8230;</p>
+                                            <div class='post-meta'>
+                                                <span class='post-author'><a
+                                                        href='https://www.blogger.com/profile/16413293425780700748'
+                                                        target='_blank'
+                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
+                                                <span class='post-date published' datetime='2022-06-11T22:36:00-07:00'>June 11, 2022</span>
+                                            </div>
+                                            <a class='read-more'
+                                               href='2022/06/healthy-daily-rutine-for-your-healthy.html'><span>Read more</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='blog-post hentry index-post post-3'>
+                                    <div class='post-image-wrap'>
+                                        <a class='post-image-link'
+                                           href='2022/06/perfect-photo-clicking-idea-you-must.html'>
+                                            <img alt='Perfect Photo Clicking Idea You Must Khow About.'
+                                                 class='post-thumb'
+                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoMWX0hvwD5tB50b8qzoYYhvMFAuUsIvqkm8SkJB6SS7tYfoIbd2gkkkxEoFqzMjnd55-i85u6KLlye1eWLKMOSVOJnssTk8qjwbHUy_KfGMo3_0s2VnHJap3TgLaMkC38pN4m51a6wuwI-vVwuUgZyfbFjRdRvrygwHD04Ct6CC1dtFDkQ5JhahUL/w72-h72-p-k-no-nu/11.jpg'/>
+                                        </a>
+                                    </div>
+                                    <div class='post-info'>
+                                        <a class='post-tag' href='search/label/camera.html'>
+                                            camera
+                                        </a>
+                                        <h2 class='post-title'>
+                                            <a href='2022/06/perfect-photo-clicking-idea-you-must.html'>Perfect Photo
+                                                Clicking Idea You Must Khow About.</a>
+                                        </h2>
+                                        <div class='index-post-footer'>
+                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
+                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
+                                                sta&#8230;</p>
+                                            <div class='post-meta'>
+                                                <span class='post-author'><a
+                                                        href='https://www.blogger.com/profile/16413293425780700748'
+                                                        target='_blank'
+                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
+                                                <span class='post-date published' datetime='2022-06-11T22:33:00-07:00'>June 11, 2022</span>
+                                            </div>
+                                            <a class='read-more'
+                                               href='2022/06/perfect-photo-clicking-idea-you-must.html'><span>Read more</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='blog-post hentry index-post post-4'>
+                                    <div class='post-image-wrap'>
+                                        <a class='post-image-link'
+                                           href='2022/06/12-things-to-see-and-find-out-in-bergen.html'>
+                                            <img alt='12 Things to See and Find Out in Bergen, Norway'
+                                                 class='post-thumb'
+                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtN-wmuYT74S45CVF0lsU1Ch6NbNOlTR3OLN-tem3NKFJxGlMYWOU7WOHfzkmdcwAnod9VdZ5RuRC95qqoLLOFrmxsOsFHpM9crTamz5B-xhzpXwYF3EvEvUZByROsq8YM1L96BERITWFOOie4qof9Im4GmGVu5RZIXMo4Gg1rmhYKyW1_O9AFwbx2/w72-h72-p-k-no-nu/10.jpg'/>
+                                        </a>
+                                    </div>
+                                    <div class='post-info'>
+                                        <a class='post-tag' href='search/label/business.html'>
+                                            business
+                                        </a>
+                                        <h2 class='post-title'>
+                                            <a href='2022/06/12-things-to-see-and-find-out-in-bergen.html'>12 Things to
+                                                See and Find Out in Bergen, Norway</a>
+                                        </h2>
+                                        <div class='index-post-footer'>
+                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
+                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
+                                                sta&#8230;</p>
+                                            <div class='post-meta'>
+                                                <span class='post-author'><a
+                                                        href='https://www.blogger.com/profile/16413293425780700748'
+                                                        target='_blank'
+                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
+                                                <span class='post-date published' datetime='2022-06-11T22:32:00-07:00'>June 11, 2022</span>
+                                            </div>
+                                            <a class='read-more'
+                                               href='2022/06/12-things-to-see-and-find-out-in-bergen.html'><span>Read more</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='blog-post hentry index-post post-5'>
+                                    <div class='post-image-wrap'>
+                                        <a class='post-image-link' href='2018/05/eat-food-for-fun.html'>
+                                            <img alt='Eat Food For Fun' class='post-thumb'
+                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhb6_lUYmcHptU_sB6Ym7o6nrk80MLxenVkSqaR570iQRTRZVGAlPueiz7Kzwu382i_yMx48haRNukbsnsw9JIfThyHvv6yMLxhsRMDcBuc5n5GoBWzzCYG_uTuKfrs3Kw9EwrDupvyF8qxFnZz060c1sB0HjIXn1ZPT6Gx4u712jdcWI7RJAINUuWg/w72-h72-p-k-no-nu/9.jpg'/>
+                                        </a>
+                                    </div>
+                                    <div class='post-info'>
+                                        <a class='post-tag' href='search/label/food.html'>
+                                            food
+                                        </a>
+                                        <h2 class='post-title'>
+                                            <a href='2018/05/eat-food-for-fun.html'>Eat Food For Fun</a>
+                                        </h2>
+                                        <div class='index-post-footer'>
+                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
+                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
+                                                sta&#8230;</p>
+                                            <div class='post-meta'>
+                                                <span class='post-author'><a
+                                                        href='https://www.blogger.com/profile/16413293425780700748'
+                                                        target='_blank'
+                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
+                                                <span class='post-date published' datetime='2018-05-23T19:51:00-07:00'>May 23, 2018</span>
+                                            </div>
+                                            <a class='read-more'
+                                               href='2018/05/eat-food-for-fun.html'><span>Read more</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='blog-post hentry index-post post-6'>
+                                    <div class='post-image-wrap'>
+                                        <a class='post-image-link' href='2018/05/what-you-must-know-what-to-eat.html'>
+                                            <img alt='What You Must Know What To Eat' class='post-thumb'
+                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsIz951wA3U8w4wjLdl_KZLm6pvMlvTIvqmb4bX_zjFFxiHREqdtas85J5Ju1ASswHO0kDvGorFBys6nde-WT5wgQTbLcfPV8joTky8EpDsZn1ex9lJ73CCEhs9Zg6kVUdyiGqwylSyVvxk0af_xV-g8h2YEvai-5wV8MLgI6a1-n4N2B9ywhThBMX/w72-h72-p-k-no-nu/8.jpg'/>
+                                        </a>
+                                    </div>
+                                    <div class='post-info'>
+                                        <a class='post-tag' href='search/label/food.html'>
+                                            food
+                                        </a>
+                                        <h2 class='post-title'>
+                                            <a href='2018/05/what-you-must-know-what-to-eat.html'>What You Must Know
+                                                What To Eat</a>
+                                        </h2>
+                                        <div class='index-post-footer'>
+                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
+                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
+                                                sta&#8230;</p>
+                                            <div class='post-meta'>
+                                                <span class='post-author'><a
+                                                        href='https://www.blogger.com/profile/16413293425780700748'
+                                                        target='_blank'
+                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
+                                                <span class='post-date published' datetime='2018-05-23T19:48:00-07:00'>May 23, 2018</span>
+                                            </div>
+                                            <a class='read-more'
+                                               href='2018/05/what-you-must-know-what-to-eat.html'><span>Read more</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='blog-post hentry index-post post-7'>
+                                    <div class='post-image-wrap'>
+                                        <a class='post-image-link'
+                                           href='2018/05/new-business-agencies-that-specialize.html'>
+                                            <img alt='New Business Agencies that Specialize in Food Industry'
+                                                 class='post-thumb'
+                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_P5AxzGtX3frYLoxLNC6ne3klpigp9qFL323fAZaLsMiJM-FK0341xWNqg5aGvd0NWfVdYYUrxS0Hh3-UWMNo-QYwZzjdYWbamGsPJcOsdOq1MrJNnq0KRQBnnkL51P4oJor9UfiPmZ5BYh2UWmaw29yFRHo1WEIZcpRBF0JPhOH-vqUKlb69oxHE/w72-h72-p-k-no-nu/7.jpg'/>
+                                        </a>
+                                    </div>
+                                    <div class='post-info'>
+                                        <a class='post-tag' href='search/label/Design.html'>
+                                            Design
+                                        </a>
+                                        <h2 class='post-title'>
+                                            <a href='2018/05/new-business-agencies-that-specialize.html'>New Business
+                                                Agencies that Specialize in Food Industry</a>
+                                        </h2>
+                                        <div class='index-post-footer'>
+                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
+                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
+                                                sta&#8230;</p>
+                                            <div class='post-meta'>
+                                                <span class='post-author'><a
+                                                        href='https://www.blogger.com/profile/16413293425780700748'
+                                                        target='_blank'
+                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
+                                                <span class='post-date published' datetime='2018-05-23T19:37:00-07:00'>May 23, 2018</span>
+                                            </div>
+                                            <a class='read-more'
+                                               href='2018/05/new-business-agencies-that-specialize.html'><span>Read more</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='blog-pager container' id='blog-pager'>
+                            <a class='blog-pager-older-link load-more'
+                               data-load='https://ezzy-templatesyard.blogspot.com/search?updated-max=2018-05-23T19:37:00-07:00&amp;max-results=8'
+                               href='javascript:;' id='load-more-link'>
+                                Load More
+                            </a>
+                            <span class='loading'><span class='loader'></span></span>
+                            <span class='no-more load-more'>
+That is All
+</span>
+                        </div>
+                        <script type='text/javascript'>
+                            var messages = {
+                                showMore: "Show more"
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- Sidebar Wrapper -->
+            <div id='sidebar-wrapper'>
+                <div class='sidebar section' id='social-widget' name='Social Widget'>
+                    <div class='widget LinkList' data-version='2' id='LinkList75'>
+                        <div class='widget-title'>
+                            <h3 class='title'>
+                                Социальные сети
+                            </h3>
+                        </div>
+                        <div class='widget-content'>
+                            <ul class='social-counter social social-color'>
+
+
+                                К сожалению мы пока не ведём соц. сети, но всё впереди!
+                                <!-- <li class='vk'><a href='index.html#' target='_blank' title='vk'></a></li>
+
+
+                                 <li class='whatsapp'><a href='index.html#' target='_blank' title='whatsapp'></a></li> -->
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class='sidebar common-widget section' id='sidebar1' name='Sidebar Right'>
+                    <div class='widget HTML' data-version='2' id='HTML1'>
+                        <div class='widget-title'>
+                            <h3 class='title'>
+                                Хотите узнавать о новых рецептах?
+                            </h3>
+                        </div>
+                        <div class='widget-content'>
+                            <form action="" method="post">
+                                <input autocomplete='off' class='search-input' name='q' placeholder='Ваш E-mail'
+                                       type='email'
+                                       value=''/>
+                                <button class="author-decor" type="submit">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class='widget PopularPosts' data-version='2' id='PopularPosts3'>
+                        <div class='widget-title'>
+                            <h3 class='title'>
+                                Самое популярное
+                            </h3>
+                        </div>
+                        <div class='widget-content'>
+                            <div class='post'>
+                                <div class='post-content'>
+                                    <a class='post-image-link'
+                                       href='2022/08/business-agencies-conference-highlights.html'>
+                                        <img alt='Business Agencies Conference Highlights' class='post-thumb'
+                                             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
+                                    </a>
+                                    <div class='post-info'>
+                                        <h2 class='post-title'>
+                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
+                                                Agencies Conference Highlights</a>
+                                        </h2>
+                                        <div class='post-meta'>
+                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022&nbsp;&nbsp;&nbsp;<i
+                                                    class="fa fa-eye">&nbsp;</i><span>5555</span></span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='post'>
+                                <div class='post-content'>
+                                    <a class='post-image-link'
+                                       href='2022/08/business-agencies-conference-highlights.html'>
+                                        <img alt='Business Agencies Conference Highlights' class='post-thumb'
+                                             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
+                                    </a>
+                                    <div class='post-info'>
+                                        <h2 class='post-title'>
+                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
+                                                Agencies Conference Highlights</a>
+                                        </h2>
+                                        <div class='post-meta'>
+                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022&nbsp;&nbsp;&nbsp;<i
+                                                    class="fa fa-eye">&nbsp;</i><span>5555</span></span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='post'>
+                                <div class='post-content'>
+                                    <a class='post-image-link'
+                                       href='2022/08/business-agencies-conference-highlights.html'>
+                                        <img alt='Business Agencies Conference Highlights' class='post-thumb'
+                                             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
+                                    </a>
+                                    <div class='post-info'>
+                                        <h2 class='post-title'>
+                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
+                                                Agencies Conference Highlights</a>
+                                        </h2>
+                                        <div class='post-meta'>
+                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022&nbsp;&nbsp;&nbsp;<i
+                                                    class="fa fa-eye">&nbsp;</i><span>5555</span></span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='post'>
+                                <div class='post-content'>
+                                    <a class='post-image-link'
+                                       href='2022/08/business-agencies-conference-highlights.html'>
+                                        <img alt='Business Agencies Conference Highlights' class='post-thumb'
+                                             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
+                                    </a>
+                                    <div class='post-info'>
+                                        <h2 class='post-title'>
+                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
+                                                Agencies Conference Highlights</a>
+                                        </h2>
+                                        <div class='post-meta'>
+                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022&nbsp;&nbsp;&nbsp;<i
+                                                    class="fa fa-eye">&nbsp;</i><span>5555</span></span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='post'>
+                                <div class='post-content'>
+                                    <a class='post-image-link'
+                                       href='2022/08/business-agencies-conference-highlights.html'>
+                                        <img alt='Business Agencies Conference Highlights' class='post-thumb'
+                                             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
+                                    </a>
+                                    <div class='post-info'>
+                                        <h2 class='post-title'>
+                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
+                                                Agencies Conference Highlights</a>
+                                        </h2>
+                                        <div class='post-meta'>
+                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022&nbsp;&nbsp;&nbsp;<i
+                                                    class="fa fa-eye">&nbsp;</i><span>5555</span></span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='post'>
+                                <div class='post-content'>
+                                    <a class='post-image-link'
+                                       href='2022/08/business-agencies-conference-highlights.html'>
+                                        <img alt='Business Agencies Conference Highlights' class='post-thumb'
+                                             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
+                                    </a>
+                                    <div class='post-info'>
+                                        <h2 class='post-title'>
+                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
+                                                Agencies Conference Highlights</a>
+                                        </h2>
+                                        <div class='post-meta'>
+                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022&nbsp;&nbsp;&nbsp;<i
+                                                    class="fa fa-eye">&nbsp;</i><span>5555</span></span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='widget Label' data-version='2' id='Label1'>
+                        <div class='widget-title'>
+                            <h3 class='title'>
+                                Tags
+                            </h3>
+                        </div>
+                        <div class='widget-content cloud-label'>
+                            <ul>
+                                <li>
+                                    <a class='label-name' href='search/label/business.html'>
+                                        business
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/camera.html'>
+                                        camera
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/Design.html'>
+                                        Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/food.html'>
+                                        food
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/Game.html'>
+                                        Game
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/Health.html'>
+                                        Health
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/Idea.html'>
+                                        Idea
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/lifestyle.html'>
+                                        lifestyle
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/living.html'>
+                                        living
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/Strategy.html'>
+                                        Strategy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/travel.html'>
+                                        travel
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/work.html'>
+                                        work
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='widget Label' data-version='2' id='Label3'>
+                        <div class='widget-title'>
+                            <h3 class='title'>
+                                Categories
+                            </h3>
+                        </div>
+                        <div class='widget-content list-label'>
+                            <ul>
+                                <li>
+                                    <a class='label-name' href='search/label/business.html'>
+                                        business
+                                        <span class='label-count'>(5)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/camera.html'>
+                                        camera
+                                        <span class='label-count'>(3)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/Design.html'>
+                                        Design
+                                        <span class='label-count'>(5)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/food.html'>
+                                        food
+                                        <span class='label-count'>(2)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/Game.html'>
+                                        Game
+                                        <span class='label-count'>(1)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/Health.html'>
+                                        Health
+                                        <span class='label-count'>(4)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/Idea.html'>
+                                        Idea
+                                        <span class='label-count'>(5)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/lifestyle.html'>
+                                        lifestyle
+                                        <span class='label-count'>(7)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/living.html'>
+                                        living
+                                        <span class='label-count'>(5)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/Strategy.html'>
+                                        Strategy
+                                        <span class='label-count'>(3)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/travel.html'>
+                                        travel
+                                        <span class='label-count'>(1)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class='label-name' href='search/label/work.html'>
+                                        work
+                                        <span class='label-count'>(1)</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='clearfix'></div>
+        </div>
+    </div>
+    <div class='clearfix'></div>
+
+    <div class='clearfix'></div>
+
+    <div class='clearfix'></div>
+    <!-- Footer Wrapper -->
+
+{% endblock %}
