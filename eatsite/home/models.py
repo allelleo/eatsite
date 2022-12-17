@@ -1,5 +1,20 @@
 from django.db import models
 from slugify import slugify
+import os
+
+
+def path_and_rename(instance, filename):
+    slug = slugify(instance.title)
+    upload_to = 'preview_photo/'
+    ext = filename.split('.')[-1]
+    # get filename
+    if instance.pk:
+        filename = '{}_{}.{}'.format(slug, instance.pk, ext)
+    else:
+        # set filename as random string
+        filename = '{}.{}'.format(slug, ext)
+    # return the whole path to the file
+    return os.path.join(upload_to, filename)
 
 
 # Create your models here.
@@ -8,13 +23,22 @@ class Category(models.Model):
     title = models.CharField(max_length=100, unique=True)
     views = models.IntegerField(default=0)
 
+    def __str__(self):
+        return self.title
+
 
 class CookingLevel(models.Model):
     title = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.title
+
 
 class KitchenType(models.Model):
     title = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
 
 
 class Recipe(models.Model):
@@ -26,7 +50,7 @@ class Recipe(models.Model):
     steps = models.TextField()  # Шаги готовки
     ingredients = models.TextField()  # Ингредиенты
 
-    preview = models.ImageField(upload_to='preview/')  # Фото блюда
+    preview = models.ImageField(upload_to=path_and_rename)  # Фото блюда
     views = models.IntegerField(default=0)  # Количество просмотров
     tags = models.CharField(max_length=200)  # Теги
 
@@ -36,11 +60,11 @@ class Recipe(models.Model):
     CookingTime = models.IntegerField(default=0)  # Время готовки
     PortionCounter = models.IntegerField(default=1)  # Количество порций
 
-    CaloricContent = models.IntegerField(default=0)  # Калорийность
-    Squirrels = models.IntegerField(default=0)  # Белки
-    Fats = models.IntegerField(default=0)  # Жиры
-    Carbohydrates = models.IntegerField(default=0)  # Углеводы
-    Water = models.IntegerField(default=0)  # Вода
+    CaloricContent = models.FloatField(default=0)  # Калорийность
+    Squirrels = models.FloatField(default=0)  # Белки
+    Fats = models.FloatField(default=0)  # Жиры
+    Carbohydrates = models.FloatField(default=0)  # Углеводы
+    Water = models.FloatField(default=0)  # Вода
 
     CookingLevel = models.ForeignKey(CookingLevel, on_delete=models.PROTECT)  # Сложность готовки
     KitchenType = models.ForeignKey(KitchenType, on_delete=models.PROTECT)  # Тип кухни
@@ -49,3 +73,6 @@ class Recipe(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title) + str(self.pk)
         super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.title
