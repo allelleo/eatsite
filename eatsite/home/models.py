@@ -18,9 +18,9 @@ class KitchenType(models.Model):
 
 
 class Recipe(models.Model):
-    title = models.CharField(max_length=150)  # Название рецепта
-    quote = models.CharField(max_length=300)  # Краткое описание
-    slug = models.CharField(max_length=200, null=True, blank=True)  # Ссылка на рецепт
+    title = models.CharField(max_length=400)  # Название рецепта
+    quote = models.CharField(max_length=1500)  # Краткое описание
+    slug = models.CharField(max_length=450, null=True, blank=True)  # Ссылка на рецепт
     published_date = models.DateTimeField(auto_now_add=True)  # Дата публикации
 
     steps = models.TextField()  # Шаги готовки
