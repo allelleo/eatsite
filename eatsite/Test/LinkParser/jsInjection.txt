@@ -1,0 +1,4 @@
+
+let t="";
+urls = document.querySelectorAll('a'); for (url in urls) t+= urls[url].href +"\n";
+console.log(t);

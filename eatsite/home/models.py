@@ -41,7 +41,6 @@ class Recipe(models.Model):
     Fats = models.IntegerField(default=0)  # Жиры
     Carbohydrates = models.IntegerField(default=0)  # Углеводы
     Water = models.IntegerField(default=0)  # Вода
-    DietaryFiber = models.IntegerField(default=0)  # Пищевые волокна
 
     CookingLevel = models.ForeignKey(CookingLevel, on_delete=models.PROTECT)  # Сложность готовки
     KitchenType = models.ForeignKey(KitchenType, on_delete=models.PROTECT)  # Тип кухни
