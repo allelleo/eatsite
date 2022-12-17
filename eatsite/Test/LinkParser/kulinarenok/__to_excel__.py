@@ -1,11 +1,38 @@
-'''from openpyxl import Workbook
+from openpyxl import Workbook
 
-data = "data.xlsx"
+
 wb = Workbook()
 ws = wb.active
-ws['A4'].value'''
+ws['A4'].value
 
 import os
+
+counter = 1
+
+
+def write_to_xlsx(title, kitchenType, cookingTime, PortionCounter, CaloricContent,
+                  Squirrels, Fats, Carbohydrates, Water, ingredients, steps,
+                  category, photo_link, quote, origin):
+    global counter, ws
+    data = "data.xlsx"
+    ws[f"A{counter}"].value = counter
+    ws[f"B{counter}"].value = title
+    ws[f"C{counter}"].value = kitchenType
+    ws[f"D{counter}"].value = cookingTime
+    ws[f"E{counter}"].value = PortionCounter
+    ws[f"F{counter}"].value = CaloricContent
+    ws[f"G{counter}"].value = Squirrels
+    ws[f"H{counter}"].value = Fats
+    ws[f"I{counter}"].value = Carbohydrates
+    ws[f"J{counter}"].value = Water
+    ws[f"K{counter}"].value = ingredients
+    ws[f"L{counter}"].value = steps
+    ws[f"M{counter}"].value = category
+    ws[f"N{counter}"].value = photo_link
+    ws[f"O{counter}"].value = quote
+    ws[f"P{counter}"].value = origin
+    wb.save(data)
+    counter+=1
 
 
 for address, dirs, files in os.walk(r'C:\Users\allelleo\Desktop\eat\eatsite\Test\LinkParser\kulinarenok\recipes'):
@@ -28,5 +55,8 @@ for address, dirs, files in os.walk(r'C:\Users\allelleo\Desktop\eat\eatsite\Test
         photo_link = data.split("PH--&%")[1]
         quote = data.split("QUOE--&%")[1]
         origin = data.split("\n")[-1]
-        break
-    break
+        write_to_xlsx(title, kitchenType, cookingTime, PortionCounter, CaloricContent,
+                      Squirrels, Fats, Carbohydrates, Water, ingredients, steps,
+                      category, photo_link, quote, origin)
+        #break
+    #break

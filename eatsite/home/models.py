@@ -28,14 +28,14 @@ class Category(models.Model):
 
 
 class CookingLevel(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
         return self.title
 
 
 class KitchenType(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
         return self.title
@@ -60,11 +60,11 @@ class Recipe(models.Model):
     CookingTime = models.IntegerField(default=0)  # Время готовки
     PortionCounter = models.IntegerField(default=1)  # Количество порций
 
-    CaloricContent = models.FloatField(default=0)  # Калорийность
-    Squirrels = models.FloatField(default=0)  # Белки
-    Fats = models.FloatField(default=0)  # Жиры
-    Carbohydrates = models.FloatField(default=0)  # Углеводы
-    Water = models.FloatField(default=0)  # Вода
+    CaloricContent = models.CharField(max_length=400)  # Калорийность
+    Squirrels = models.CharField(max_length=400)  # Белки
+    Fats = models.CharField(max_length=400)  # Жиры
+    Carbohydrates = models.CharField(max_length=400)  # Углеводы
+    Water = models.CharField(max_length=400)  # Вода
 
     CookingLevel = models.ForeignKey(CookingLevel, on_delete=models.PROTECT)  # Сложность готовки
     KitchenType = models.ForeignKey(KitchenType, on_delete=models.PROTECT)  # Тип кухни
@@ -76,3 +76,9 @@ class Recipe(models.Model):
 
     def __str__(self):
         return self.title
+
+
+'''from .load_data import LoadCategories, LoadKitchenTypes
+
+LoadKitchenTypes(KitchenType)
+LoadCategories(Category)'''
