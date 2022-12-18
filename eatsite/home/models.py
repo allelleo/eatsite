@@ -21,7 +21,13 @@ def path_and_rename(instance, filename):
 
 class Category(models.Model):
     title = models.CharField(max_length=100, unique=True)
+    slug = models.CharField(max_length=120, null=True, blank=True)
     views = models.IntegerField(default=0)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title
@@ -76,6 +82,34 @@ class Recipe(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Subscribes(models.Model):
+    ip = models.CharField(max_length=50)
+    email = models.CharField(max_length=200, unique=True)
+
+    def __str__(self):
+        return self.ip + ":" + self.email
+
+
+class Contact(models.Model):
+    ip = models.CharField(max_length=50)
+    message = models.TextField()
+    email = models.CharField(max_length=200)
+    check = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.ip + ":" + self.email
+
+    class Meta:
+        ordering = ['check']
+
+
+class Search(models.Model):
+    query = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.query
 
 
 '''from .load_data import LoadCategories, LoadKitchenTypes

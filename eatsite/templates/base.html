@@ -23,9 +23,9 @@
                 <div class='widget LinkList' data-version='2' id='LinkList72'>
                     <div class='widget-content'>
                         <ul>
-                            <li><a href='index.html'>Главная</a></li>
-                            <li><a href='p/about.html'>О нас</a></li>
-                            <li><a href='p/contact-us.html'>Связаться</a></li>
+                            <li><a href='{% url 'home' %}'>Главная</a></li>
+                            <li><a href='{% url 'home' %}'>О нас</a></li>
+                            <li><a href='{% url 'home' %}'>Связаться</a></li>
                         </ul>
                     </div>
                 </div>
@@ -62,16 +62,16 @@
                 <div class='main-menu section' id='main-menu' name='Main Menu'>
                     <div class='widget LinkList' data-version='2' id='LinkList74'>
                         <ul id='main-menu-nav' role='menubar'>
-                            <li><a href='index.html' role='menuitem'>Главная</a></li>
-                            <li><a href='index.html#' role='menuitem'>Навигация</a></li>
+                            <li><a href='{% url 'home' %}' role='menuitem'>Главная</a></li>
+                            <li><a href='{% url 'home' %}' role='menuitem'>Навигация</a></li>
 
-                            <li><a href='https://www.templatesyard.com/2022/08/ezzy-blogger-template.html'
+                            <li><a href='{% url 'home' %}'
                                    role='menuitem'>Добавить рецепт!</a></li>
-                            <li><a href='index.html#' role='menuitem'>Documentation</a></li>
+                            <li><a href='{% url 'home' %}' role='menuitem'>Documentation</a></li>
                             <li>
-                                <a href='https://www.sorabloggingtips.com/2022/08/how-to-setup-ezzy-blogger-template.html'
+                                <a href='{% url 'home' %}'
                                    role='menuitem'>_Web Doc</a>
-                                <a href='https://www.sorabloggingtips.com/2022/08/how-to-setup-ezzy-blogger-template.html'
+                                <a href='{% url 'home' %}'
                                    role='menuitem'>_Web Doc</a>
                         </li>
                         </ul>

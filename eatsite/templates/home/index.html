@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
     <!-- Main Top Bar -->
     <!-- Featured Wrapper -->
@@ -271,281 +270,90 @@
                         <div class='clearfix'></div>
                         <div class='blog-posts hfeed container index-post-wrap'>
                             <div class='grid-posts'>
-                                <div class='blog-post hentry index-post post-0'>
+                                {% for RandomRecipe in RandomRecipeTwo %}
+                                    <div class='blog-post hentry index-post post-2'>
                                     <div class='post-image-wrap'>
                                         <a class='post-image-link'
-                                           href='2022/08/business-agencies-conference-highlights.html'>
-                                            <img alt='Business Agencies Conference Highlights' class='post-thumb'
-                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
-                                        </a>
-                                    </div>
-                                    <div class='post-info'>
-                                        <a class='post-tag' href='search/label/business.html'>
-                                            business
-                                        </a>
-                                        <h2 class='post-title'>
-                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
-                                                Agencies Conference Highlights</a>
-                                        </h2>
-                                        <div class='index-post-footer'>
-                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
-                                                sta&#8230;</p>
-                                            <div class='post-meta'>
-                                                <span class='post-author'><a
-                                                        href='https://www.blogger.com/profile/16413293425780700748'
-                                                        target='_blank'
-                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
-                                                <span class='post-date published' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022</span>
-                                            </div>
-                                            <a class='read-more'
-                                               href='2022/08/business-agencies-conference-highlights.html'><span>Read more</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='blog-post hentry index-post post-1'>
-                                    <div class='post-image-wrap'>
-                                        <a class='post-image-link'
-                                           href='2018/05/how-ads-may-influence-your-business-to.html'>
-                                            <img alt='How Ads May Influence your business to grow' class='post-thumb'
-                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmwRU0uTMyV4SXAuBwXohg_vEWRHcjZ_QHWPyUFdr6STLDqeteAsJn_MBsH9wDtUeJV9wwVPHyUSUsXYCQ7-g3YfFjeTGCZ0o_bGnu04tf2WCJ0qkH__7SXYXXIJdfwJuAyzlC_JzDAc-0c-TrWcba-mWMW1zM9IJ5-mlgX21CJpDjFKmbIR0aJxd-/w72-h72-p-k-no-nu/6.jpg'/>
-                                        </a>
-                                    </div>
-                                    <div class='post-info'>
-                                        <a class='post-tag' href='search/label/Design.html'>
-                                            Design
-                                        </a>
-                                        <h2 class='post-title'>
-                                            <a href='2018/05/how-ads-may-influence-your-business-to.html'>How Ads May
-                                                Influence your business to grow</a>
-                                        </h2>
-                                        <div class='index-post-footer'>
-                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
-                                                sta&#8230;</p>
-                                            <div class='post-meta'>
-                                                <span class='post-author'><a
-                                                        href='https://www.blogger.com/profile/16413293425780700748'
-                                                        target='_blank'
-                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
-                                                <span class='post-date published' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022</span>
-                                            </div>
-                                            <a class='read-more'
-                                               href='2018/05/how-ads-may-influence-your-business-to.html'><span>Read more</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='blog-post hentry index-post post-2'>
-                                    <div class='post-image-wrap'>
-                                        <a class='post-image-link'
-                                           href='2022/06/healthy-daily-rutine-for-your-healthy.html'>
+                                           href='recipe/{{ RandomRecipe.slug }}'>
                                             <img alt='Healthy Daily Rutine For Your Healthy Lifestyle'
                                                  class='post-thumb'
-                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhin41Ik8HLf4JCPF2hnR5XPQnBARAgHwxr8hUaDeRa8OMoX0fabe_gjdRUBu3accEP58xzgPLGcQRv9Z5-yggjsuXIZEmlsbsGCBZWm4xpkydtT3RatfkVqW0FZzpYDTzVJvlQd25LjNEet4NqY-nn76bi4qiHZPOIQQc146f1eFDm8qfdlRBEUqQp/w72-h72-p-k-no-nu/12.jpg'/>
+                                                 src='{{ media }}{{ RandomRecipe.preview }}'/>
                                         </a>
                                     </div>
                                     <div class='post-info'>
-                                        <a class='post-tag' href='search/label/Health.html'>
-                                            Health
+                                        <a class='post-tag' href='recipe/{{ RandomRecipe.category.slug }}'>
+                                            {{ RandomRecipe.category.title }}
                                         </a>
+                                    
                                         <h2 class='post-title'>
-                                            <a href='2022/06/healthy-daily-rutine-for-your-healthy.html'>Healthy Daily
-                                                Rutine For Your Healthy Lifestyle</a>
+                                            <a href='recipe/{{ RandomRecipe.slug }}'>{{ RandomRecipe.title }}</a>
                                         </h2>
                                         <div class='index-post-footer'>
-                                            <p class='post-snippet'>left-sidebar Lorem Ipsum is simply dummy text of the
-                                                printing and typesetting industry. Lorem Ipsum has been the
-                                                indus&#8230;</p>
+                                            <p class='post-snippet'>{{ RandomRecipe.quote }}&#8230;</p>
                                             <div class='post-meta'>
+                                                {% if RandomRecipe.author_name == 'SiteName' %}
                                                 <span class='post-author'><a
-                                                        href='https://www.blogger.com/profile/16413293425780700748'
+                                                        href='{{ SiteLink }}'
                                                         target='_blank'
-                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
-                                                <span class='post-date published' datetime='2022-06-11T22:36:00-07:00'>June 11, 2022</span>
+                                                        title='{{ SiteName }}'>{{ SiteName }}</a></span>
+                                                {% else %}
+                                                    <span class='post-author'><a
+                                                        href='{{ RandomRecipe.author_link }}'
+                                                        target='_blank'
+                                                        title='{{ RandomRecipe.author_name }}'>{{ RandomRecipe.author_name }}</a></span>
+                                                {% endif %}
+                                                <span class='post-date published'>{{ RandomRecipe.published_date }}</span>
                                             </div>
                                             <a class='read-more'
-                                               href='2022/06/healthy-daily-rutine-for-your-healthy.html'><span>Read more</span></a>
+                                               href='recipe/{{ RandomRecipe.slug }}'><span>Читать!</span></a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class='blog-post hentry index-post post-3'>
+                                {% endfor %}
+                                {% for LastRecipe in LastSixRecipes %}
+                                    <div class='blog-post hentry index-post post-2'>
                                     <div class='post-image-wrap'>
                                         <a class='post-image-link'
-                                           href='2022/06/perfect-photo-clicking-idea-you-must.html'>
-                                            <img alt='Perfect Photo Clicking Idea You Must Khow About.'
+                                           href='recipe/{{ LastRecipe.slug }}'>
+                                            <img alt='{{ LastRecipe.title }}'
                                                  class='post-thumb'
-                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoMWX0hvwD5tB50b8qzoYYhvMFAuUsIvqkm8SkJB6SS7tYfoIbd2gkkkxEoFqzMjnd55-i85u6KLlye1eWLKMOSVOJnssTk8qjwbHUy_KfGMo3_0s2VnHJap3TgLaMkC38pN4m51a6wuwI-vVwuUgZyfbFjRdRvrygwHD04Ct6CC1dtFDkQ5JhahUL/w72-h72-p-k-no-nu/11.jpg'/>
+                                                 src='{{ media }}{{ LastRecipe.preview }}'/>
                                         </a>
                                     </div>
                                     <div class='post-info'>
-                                        <a class='post-tag' href='search/label/camera.html'>
-                                            camera
+                                        <a class='post-tag' href='category/{{ LastRecipe.category.slug }}'>
+                                            {{ LastRecipe.category.title }}
                                         </a>
+
                                         <h2 class='post-title'>
-                                            <a href='2022/06/perfect-photo-clicking-idea-you-must.html'>Perfect Photo
-                                                Clicking Idea You Must Khow About.</a>
+                                            <a href='recipe/{{ LastRecipe.slug }}'>{{ LastRecipe.title }}</a>
                                         </h2>
                                         <div class='index-post-footer'>
-                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
-                                                sta&#8230;</p>
+                                            <p class='post-snippet'>{{ LastRecipe.quote }}&#8230;</p>
                                             <div class='post-meta'>
+                                                {% if LastRecipe.author_name == 'SiteName' %}
                                                 <span class='post-author'><a
-                                                        href='https://www.blogger.com/profile/16413293425780700748'
+                                                        href='{{ SiteLink }}'
                                                         target='_blank'
-                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
-                                                <span class='post-date published' datetime='2022-06-11T22:33:00-07:00'>June 11, 2022</span>
+                                                        title='{{ SiteName }}'>{{ SiteName }}</a></span>
+                                                {% else %}
+                                                    <span class='post-author'><a
+                                                        href='{{ LastRecipe.author_link }}'
+                                                        target='_blank'
+                                                        title='{{ LastRecipe.author_name }}'>{{ LastRecipe.author_name }}</a></span>
+                                                {% endif %}
+                                                <span class='post-date published'>{{ LastRecipe.published_date }}</span>
                                             </div>
                                             <a class='read-more'
-                                               href='2022/06/perfect-photo-clicking-idea-you-must.html'><span>Read more</span></a>
+                                               href='recipe/{{ LastRecipe.slug }}'><span>Читать!</span></a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class='blog-post hentry index-post post-4'>
-                                    <div class='post-image-wrap'>
-                                        <a class='post-image-link'
-                                           href='2022/06/12-things-to-see-and-find-out-in-bergen.html'>
-                                            <img alt='12 Things to See and Find Out in Bergen, Norway'
-                                                 class='post-thumb'
-                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtN-wmuYT74S45CVF0lsU1Ch6NbNOlTR3OLN-tem3NKFJxGlMYWOU7WOHfzkmdcwAnod9VdZ5RuRC95qqoLLOFrmxsOsFHpM9crTamz5B-xhzpXwYF3EvEvUZByROsq8YM1L96BERITWFOOie4qof9Im4GmGVu5RZIXMo4Gg1rmhYKyW1_O9AFwbx2/w72-h72-p-k-no-nu/10.jpg'/>
-                                        </a>
-                                    </div>
-                                    <div class='post-info'>
-                                        <a class='post-tag' href='search/label/business.html'>
-                                            business
-                                        </a>
-                                        <h2 class='post-title'>
-                                            <a href='2022/06/12-things-to-see-and-find-out-in-bergen.html'>12 Things to
-                                                See and Find Out in Bergen, Norway</a>
-                                        </h2>
-                                        <div class='index-post-footer'>
-                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
-                                                sta&#8230;</p>
-                                            <div class='post-meta'>
-                                                <span class='post-author'><a
-                                                        href='https://www.blogger.com/profile/16413293425780700748'
-                                                        target='_blank'
-                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
-                                                <span class='post-date published' datetime='2022-06-11T22:32:00-07:00'>June 11, 2022</span>
-                                            </div>
-                                            <a class='read-more'
-                                               href='2022/06/12-things-to-see-and-find-out-in-bergen.html'><span>Read more</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='blog-post hentry index-post post-5'>
-                                    <div class='post-image-wrap'>
-                                        <a class='post-image-link' href='2018/05/eat-food-for-fun.html'>
-                                            <img alt='Eat Food For Fun' class='post-thumb'
-                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhb6_lUYmcHptU_sB6Ym7o6nrk80MLxenVkSqaR570iQRTRZVGAlPueiz7Kzwu382i_yMx48haRNukbsnsw9JIfThyHvv6yMLxhsRMDcBuc5n5GoBWzzCYG_uTuKfrs3Kw9EwrDupvyF8qxFnZz060c1sB0HjIXn1ZPT6Gx4u712jdcWI7RJAINUuWg/w72-h72-p-k-no-nu/9.jpg'/>
-                                        </a>
-                                    </div>
-                                    <div class='post-info'>
-                                        <a class='post-tag' href='search/label/food.html'>
-                                            food
-                                        </a>
-                                        <h2 class='post-title'>
-                                            <a href='2018/05/eat-food-for-fun.html'>Eat Food For Fun</a>
-                                        </h2>
-                                        <div class='index-post-footer'>
-                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
-                                                sta&#8230;</p>
-                                            <div class='post-meta'>
-                                                <span class='post-author'><a
-                                                        href='https://www.blogger.com/profile/16413293425780700748'
-                                                        target='_blank'
-                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
-                                                <span class='post-date published' datetime='2018-05-23T19:51:00-07:00'>May 23, 2018</span>
-                                            </div>
-                                            <a class='read-more'
-                                               href='2018/05/eat-food-for-fun.html'><span>Read more</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='blog-post hentry index-post post-6'>
-                                    <div class='post-image-wrap'>
-                                        <a class='post-image-link' href='2018/05/what-you-must-know-what-to-eat.html'>
-                                            <img alt='What You Must Know What To Eat' class='post-thumb'
-                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsIz951wA3U8w4wjLdl_KZLm6pvMlvTIvqmb4bX_zjFFxiHREqdtas85J5Ju1ASswHO0kDvGorFBys6nde-WT5wgQTbLcfPV8joTky8EpDsZn1ex9lJ73CCEhs9Zg6kVUdyiGqwylSyVvxk0af_xV-g8h2YEvai-5wV8MLgI6a1-n4N2B9ywhThBMX/w72-h72-p-k-no-nu/8.jpg'/>
-                                        </a>
-                                    </div>
-                                    <div class='post-info'>
-                                        <a class='post-tag' href='search/label/food.html'>
-                                            food
-                                        </a>
-                                        <h2 class='post-title'>
-                                            <a href='2018/05/what-you-must-know-what-to-eat.html'>What You Must Know
-                                                What To Eat</a>
-                                        </h2>
-                                        <div class='index-post-footer'>
-                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
-                                                sta&#8230;</p>
-                                            <div class='post-meta'>
-                                                <span class='post-author'><a
-                                                        href='https://www.blogger.com/profile/16413293425780700748'
-                                                        target='_blank'
-                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
-                                                <span class='post-date published' datetime='2018-05-23T19:48:00-07:00'>May 23, 2018</span>
-                                            </div>
-                                            <a class='read-more'
-                                               href='2018/05/what-you-must-know-what-to-eat.html'><span>Read more</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='blog-post hentry index-post post-7'>
-                                    <div class='post-image-wrap'>
-                                        <a class='post-image-link'
-                                           href='2018/05/new-business-agencies-that-specialize.html'>
-                                            <img alt='New Business Agencies that Specialize in Food Industry'
-                                                 class='post-thumb'
-                                                 src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_P5AxzGtX3frYLoxLNC6ne3klpigp9qFL323fAZaLsMiJM-FK0341xWNqg5aGvd0NWfVdYYUrxS0Hh3-UWMNo-QYwZzjdYWbamGsPJcOsdOq1MrJNnq0KRQBnnkL51P4oJor9UfiPmZ5BYh2UWmaw29yFRHo1WEIZcpRBF0JPhOH-vqUKlb69oxHE/w72-h72-p-k-no-nu/7.jpg'/>
-                                        </a>
-                                    </div>
-                                    <div class='post-info'>
-                                        <a class='post-tag' href='search/label/Design.html'>
-                                            Design
-                                        </a>
-                                        <h2 class='post-title'>
-                                            <a href='2018/05/new-business-agencies-that-specialize.html'>New Business
-                                                Agencies that Specialize in Food Industry</a>
-                                        </h2>
-                                        <div class='index-post-footer'>
-                                            <p class='post-snippet'>Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry&#39;s
-                                                sta&#8230;</p>
-                                            <div class='post-meta'>
-                                                <span class='post-author'><a
-                                                        href='https://www.blogger.com/profile/16413293425780700748'
-                                                        target='_blank'
-                                                        title='Sora Blogging Tips'>Sora Blogging Tips</a></span>
-                                                <span class='post-date published' datetime='2018-05-23T19:37:00-07:00'>May 23, 2018</span>
-                                            </div>
-                                            <a class='read-more'
-                                               href='2018/05/new-business-agencies-that-specialize.html'><span>Read more</span></a>
-                                        </div>
-                                    </div>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
-                        <div class='blog-pager container' id='blog-pager'>
-                            <a class='blog-pager-older-link load-more'
-                               data-load='https://ezzy-templatesyard.blogspot.com/search?updated-max=2018-05-23T19:37:00-07:00&amp;max-results=8'
-                               href='javascript:;' id='load-more-link'>
-                                Load More
-                            </a>
-                            <span class='loading'><span class='loader'></span></span>
-                            <span class='no-more load-more'>
-That is All
-</span>
-                        </div>
-                        <script type='text/javascript'>
-                            var messages = {
-                                showMore: "Show more"
-                            }
-                        </script>
+
+
                     </div>
                 </div>
             </div>
@@ -591,207 +399,52 @@ That is All
                     <div class='widget PopularPosts' data-version='2' id='PopularPosts3'>
                         <div class='widget-title'>
                             <h3 class='title'>
-                                Самое популярное
+                                Самые популярные рецепты
                             </h3>
                         </div>
                         <div class='widget-content'>
+                            {% for recipe in MostPopularRecipes %}
                             <div class='post'>
                                 <div class='post-content'>
                                     <a class='post-image-link'
-                                       href='2022/08/business-agencies-conference-highlights.html'>
-                                        <img alt='Business Agencies Conference Highlights' class='post-thumb'
-                                             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
+                                       href='{{ SiteLink }}/recipe/{{ recipe.slug }}'>
+                                        <img alt='{{ recipe.title }}' class='post-thumb'
+                                             src='{{ media }}{{ recipe.preview }}'/>
                                     </a>
                                     <div class='post-info'>
                                         <h2 class='post-title'>
-                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
-                                                Agencies Conference Highlights</a>
+                                            <a href='recipe/{{ recipe.slug }}'>{{ recipe.title }}</a>
                                         </h2>
                                         <div class='post-meta'>
-                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022&nbsp;&nbsp;&nbsp;<i
-                                                    class="fa fa-eye">&nbsp;</i><span>5555</span></span>
+                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>{{ recipe.published_date }}&nbsp;&nbsp;&nbsp;<i
+                                                    class="fa fa-eye">&nbsp;</i><span>{{ recipe.views }}</span></span>
 
 
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class='post'>
-                                <div class='post-content'>
-                                    <a class='post-image-link'
-                                       href='2022/08/business-agencies-conference-highlights.html'>
-                                        <img alt='Business Agencies Conference Highlights' class='post-thumb'
-                                             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
-                                    </a>
-                                    <div class='post-info'>
-                                        <h2 class='post-title'>
-                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
-                                                Agencies Conference Highlights</a>
-                                        </h2>
-                                        <div class='post-meta'>
-                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022&nbsp;&nbsp;&nbsp;<i
-                                                    class="fa fa-eye">&nbsp;</i><span>5555</span></span>
+                            {% endfor %}
 
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='post'>
-                                <div class='post-content'>
-                                    <a class='post-image-link'
-                                       href='2022/08/business-agencies-conference-highlights.html'>
-                                        <img alt='Business Agencies Conference Highlights' class='post-thumb'
-                                             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
-                                    </a>
-                                    <div class='post-info'>
-                                        <h2 class='post-title'>
-                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
-                                                Agencies Conference Highlights</a>
-                                        </h2>
-                                        <div class='post-meta'>
-                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022&nbsp;&nbsp;&nbsp;<i
-                                                    class="fa fa-eye">&nbsp;</i><span>5555</span></span>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='post'>
-                                <div class='post-content'>
-                                    <a class='post-image-link'
-                                       href='2022/08/business-agencies-conference-highlights.html'>
-                                        <img alt='Business Agencies Conference Highlights' class='post-thumb'
-                                             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
-                                    </a>
-                                    <div class='post-info'>
-                                        <h2 class='post-title'>
-                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
-                                                Agencies Conference Highlights</a>
-                                        </h2>
-                                        <div class='post-meta'>
-                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022&nbsp;&nbsp;&nbsp;<i
-                                                    class="fa fa-eye">&nbsp;</i><span>5555</span></span>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='post'>
-                                <div class='post-content'>
-                                    <a class='post-image-link'
-                                       href='2022/08/business-agencies-conference-highlights.html'>
-                                        <img alt='Business Agencies Conference Highlights' class='post-thumb'
-                                             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
-                                    </a>
-                                    <div class='post-info'>
-                                        <h2 class='post-title'>
-                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
-                                                Agencies Conference Highlights</a>
-                                        </h2>
-                                        <div class='post-meta'>
-                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022&nbsp;&nbsp;&nbsp;<i
-                                                    class="fa fa-eye">&nbsp;</i><span>5555</span></span>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='post'>
-                                <div class='post-content'>
-                                    <a class='post-image-link'
-                                       href='2022/08/business-agencies-conference-highlights.html'>
-                                        <img alt='Business Agencies Conference Highlights' class='post-thumb'
-                                             src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbYVHd3Bc5zQ2Rxdh-jQsD3SX5BIHKx__swJUgs_ZemxWX0slfjWoF_mQWRQxqBRpw2LWkw8cPZufBB647ejFxgMFMAzJIYMXWlWXKEWaKW0Es7A0mDdcBwrAOhwV1QmCfz31m_JHodfPa77P0pPK0bveUk--gdljsqjgT2q7p7JsTA0hcbHdls5SR/w72-h72-p-k-no-nu/2.jpg'/>
-                                    </a>
-                                    <div class='post-info'>
-                                        <h2 class='post-title'>
-                                            <a href='2022/08/business-agencies-conference-highlights.html'>Business
-                                                Agencies Conference Highlights</a>
-                                        </h2>
-                                        <div class='post-meta'>
-                                            <span class='post-date ' datetime='2022-08-23T22:19:00-07:00'>August 23, 2022&nbsp;&nbsp;&nbsp;<i
-                                                    class="fa fa-eye">&nbsp;</i><span>5555</span></span>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
                     <div class='widget Label' data-version='2' id='Label1'>
                         <div class='widget-title'>
                             <h3 class='title'>
-                                Tags
+                                Категории
                             </h3>
                         </div>
                         <div class='widget-content cloud-label'>
                             <ul>
+                                {% for cat in AllCategories %}
                                 <li>
-                                    <a class='label-name' href='search/label/business.html'>
-                                        business
+                                    <a class='label-name' href='categories/{{ cat.1 }}'>
+                                        {{ cat.0 }}
                                     </a>
                                 </li>
-                                <li>
-                                    <a class='label-name' href='search/label/camera.html'>
-                                        camera
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class='label-name' href='search/label/Design.html'>
-                                        Design
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class='label-name' href='search/label/food.html'>
-                                        food
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class='label-name' href='search/label/Game.html'>
-                                        Game
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class='label-name' href='search/label/Health.html'>
-                                        Health
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class='label-name' href='search/label/Idea.html'>
-                                        Idea
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class='label-name' href='search/label/lifestyle.html'>
-                                        lifestyle
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class='label-name' href='search/label/living.html'>
-                                        living
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class='label-name' href='search/label/Strategy.html'>
-                                        Strategy
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class='label-name' href='search/label/travel.html'>
-                                        travel
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class='label-name' href='search/label/work.html'>
-                                        work
-                                    </a>
-                                </li>
+                                {% endfor %}
+
                             </ul>
                         </div>
                     </div>
