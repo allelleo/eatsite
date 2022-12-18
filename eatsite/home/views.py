@@ -46,20 +46,24 @@ class GetRecipe(View):
 
     def GetRecipeBySlug(self, slug):
         RecipeObject = Recipe.objects.get(slug=slug)
+        RecipeObject.views += 1
+        RecipeObject.category.views += 1
+        RecipeObject.save()
+        RecipeObject.category.save()
         return RecipeObject
 
     def context(self, slug):
         MostPopularRecipes = Recipe.objects.order_by('-views')[0:6]
         AllCategories = [[cat.title, slugify(cat.title)] for cat in Category.objects.all()]
+        recipe = self.GetRecipeBySlug(slug)
         return {
-            "Recipe": self.GetRecipeBySlug(slug),
-            'Ingredients': self.GetRecipeBySlug(slug).ingredients.split('\n\n'),
-            "Steps": [[i+1, self.GetRecipeBySlug(slug).steps.split('\n\n')[i]] for i in range(len(self.GetRecipeBySlug(slug).steps.split('\n\n')))],
+            "Recipe": recipe,
+            'Ingredients': recipe.ingredients.split('\n\n'),
+            "Steps": [[i + 1, recipe.steps.split('\n\n')[i]] for i in range(len(recipe.steps.split('\n\n')))],
             'SiteName': HomeConfig.SiteName,
             'SiteLink': HomeConfig.SiteLink,
             "MostPopularRecipes": MostPopularRecipes,
             "AllCategories": AllCategories,
-
             "media": MEDIA_URL,
         }
 

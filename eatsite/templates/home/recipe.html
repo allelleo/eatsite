@@ -1,0 +1,306 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="row" id="content-wrapper" style="transform: none;">
+        <div class="container" style="transform: none;">
+            <!-- Main Wrapper -->
+            <div id="main-wrapper"
+                 style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+
+
+                <div class="theiaStickySidebar"
+                     style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
+                    <div id="custom-ads1">
+                        <div class="section" id="ty-post-before-ad" name="Post ADS 1"></div>
+                    </div>
+                    <div class="main section" id="main" name="Main Posts">
+                        <div class="widget Blog" data-version="2" id="Blog1">
+                            <div class="blog-posts hfeed container item-post-wrap">
+                                <div class="blog-post hentry item-post">
+                                    <div class="post-item-inner">
+
+                                        <nav id="breadcrumb"><a href="/">Главная</a><em
+                                                class="delimiter"></em><a class="b-label"
+                                                                          href="category/{{ Recipe.category.slug }}">{{ Recipe.category }}</a>
+                                        </nav>
+
+                                        <h1 class="post-title">
+                                            {{ Recipe.title }}
+                                        </h1>
+                                        <div class="post-meta">
+                                            {% if Recipe.author_name == 'SiteName' %}
+                                                <span class='post-author'><a
+                                                        href='{{ SiteLink }}'
+                                                        target='_blank'
+                                                        title='{{ SiteName }}'>{{ SiteName }}</a></span>
+                                                <span class="post-date published">{{ Recipe.published_date }}</span>
+                                                <span><i class="fa fa-eye">&nbsp;</i><span>{{ Recipe.views }}</span></span>
+                                            {% else %}
+                                                <span class='post-author'><a
+                                                        href='{{ Recipe.author_link }}'
+                                                        target='_blank'
+                                                        title='{{ Recipe.author_name }}'>{{ Recipe.author_name }}</a></span>
+                                                <span class="post-date published">{{ Recipe.published_date }}</span>
+                                                <span><i class="fa fa-eye">&nbsp;</i><span>{{ Recipe.views }}</span></span>
+
+                                            {% endif %}
+
+                                        </div>
+
+                                        <div class="post-body post-content" id="post-body">
+                                            <div dir="ltr" style="text-align: left;" trbidi="on">
+                                                <div class="separator" style="clear: both; text-align: center;">
+                                                    <a>
+                                                        <img
+                                                                data-original-height="423"
+                                                                data-original-width="640"
+                                                                src="{{ media }}{{ Recipe.preview }}"
+                                                                class="lazy-yard">
+                                                    </a>
+                                                </div>
+                                                <br>
+                                                <div style="text-align: center;"><br></div>
+
+                                                <div><br>
+                                                    <blockquote class="tr_bq">
+                                                        {{ Recipe.quote }}
+                                                    </blockquote>
+                                                    <br>
+                                                    <h2 style="text-align: center;"> Ингридиенты </h2>
+                                                    <ul>
+                                                        {% for ing in Ingredients %}
+                                                            {% if ing != "" %}
+                                                                <li>{{ ing }}</li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </ul>
+                                                    {% for step in Steps %}
+                                                        {% if step.1 != "" %}
+                                                            <h2 style="text-align: center;"> Шаг {{ step.0 }} </h2>
+                                                            <div><br>
+                                                                {{ step.1 }}
+                                                            </div>
+                                                            <br>
+                                                        {% endif %}
+                                                    {% endfor %}
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    <br>
+                                        <div class="post-labels">
+                                            <div class="label-head Label">
+                                                <a class="label-link"
+                                                   rel="tag">Калории: {{ Recipe.CaloricContent }}
+                                                </a>
+                                               <a class="label-link"
+                                                   rel="tag">Белки: {{ Recipe.Squirrels }}
+                                                </a>
+                                                <a class="label-link"
+                                                   rel="tag">Жиры: {{ Recipe.Fats }}
+                                                </a>
+                                                <a class="label-link"
+                                                   rel="tag">Углеводы: {{ Recipe.Carbohydrates }}
+                                                </a>
+                                                <a class="label-link"
+                                                   rel="tag">Вода: {{ Recipe.Water }}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="custom-ads2">
+                    <div class="section" id="ty-post-after-ad" name="Post ADS 2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar Wrapper -->
+        <div class='sidebar common-widget section' id='sidebar1' name='Sidebar Right'>
+            <div id='sidebar-wrapper'>
+                <div class='sidebar section' id='social-widget' name='Social Widget'>
+                    <div class='widget LinkList' data-version='2' id='LinkList75'>
+                        <div class='widget-title'>
+                            <h3 class='title'>
+                                Социальные сети
+                            </h3>
+                        </div>
+                        <div class='widget-content'>
+                            <ul class='social-counter social social-color'>
+
+
+                                К сожалению мы пока не ведём соц. сети, но всё впереди!
+                                <!-- <li class='vk'><a href='index.html#' target='_blank' title='vk'></a></li>
+
+
+                                 <li class='whatsapp'><a href='index.html#' target='_blank' title='whatsapp'></a></li> -->
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class='widget HTML' data-version='2' id='HTML1'>
+                    <div class='widget-title'>
+                        <h3 class='title'>
+                            Хотите узнавать о новых рецептах?
+                        </h3>
+                    </div>
+                    <div class='widget-content'>
+                        <form action="" method="post">
+                            <input autocomplete='off' class='search-input' name='q' placeholder='Ваш E-mail'
+                                   type='email'
+                                   value=''/>
+                            <button class="author-decor" type="submit">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+                <div class='widget PopularPosts' data-version='2' id='PopularPosts3'>
+                    <div class='widget-title'>
+                        <h3 class='title'>
+                            Самые популярные рецепты
+                        </h3>
+                    </div>
+                    <div class='widget-content'>
+                        {% for recipe in MostPopularRecipes %}
+                            <div class='post'>
+                                <div class='post-content'>
+                                    <a class='post-image-link'
+                                       href='{% url 'recipe' recipe.slug %}'>
+                                        <img alt='{{ recipe.title }}' class='post-thumb'
+                                             src='{{ media }}{{ recipe.preview }}'/>
+                                    </a>
+                                    <div class='post-info'>
+                                        <h2 class='post-title'>
+                                            <a href='{% url 'recipe' recipe.slug %}'>{{ recipe.title }}</a>
+                                        </h2>
+                                        <div class='post-meta'>
+                                            <span class='post-date '
+                                            >{{ recipe.published_date }}&nbsp;&nbsp;&nbsp;<i
+                                                    class="fa fa-eye">&nbsp;</i><span>{{ recipe.views }}</span></span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+
+                <div class='widget Label' data-version='2' id='Label1'>
+                    <div class='widget-title'>
+                        <h3 class='title'>
+                            Категории
+                        </h3>
+                    </div>
+                    <div class='widget-content cloud-label'>
+                        <ul>
+                            {% for cat in AllCategories %}
+                                <li>
+                                    <a class='label-name' href='categories/{{ cat.1 }}'>
+                                        {{ cat.0 }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+                <div class='widget Label' data-version='2' id='Label3'>
+                    <div class='widget-title'>
+                        <h3 class='title'>
+                            Categories
+                        </h3>
+                    </div>
+                    <div class='widget-content list-label'>
+                        <ul>
+                            <li>
+                                <a class='label-name' href='search/label/business.html'>
+                                    business
+                                    <span class='label-count'>(5)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class='label-name' href='search/label/camera.html'>
+                                    camera
+                                    <span class='label-count'>(3)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class='label-name' href='search/label/Design.html'>
+                                    Design
+                                    <span class='label-count'>(5)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class='label-name' href='search/label/food.html'>
+                                    food
+                                    <span class='label-count'>(2)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class='label-name' href='search/label/Game.html'>
+                                    Game
+                                    <span class='label-count'>(1)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class='label-name' href='search/label/Health.html'>
+                                    Health
+                                    <span class='label-count'>(4)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class='label-name' href='search/label/Idea.html'>
+                                    Idea
+                                    <span class='label-count'>(5)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class='label-name' href='search/label/lifestyle.html'>
+                                    lifestyle
+                                    <span class='label-count'>(7)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class='label-name' href='search/label/living.html'>
+                                    living
+                                    <span class='label-count'>(5)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class='label-name' href='search/label/Strategy.html'>
+                                    Strategy
+                                    <span class='label-count'>(3)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class='label-name' href='search/label/travel.html'>
+                                    travel
+                                    <span class='label-count'>(1)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class='label-name' href='search/label/work.html'>
+                                    work
+                                    <span class='label-count'>(1)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
