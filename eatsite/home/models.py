@@ -66,11 +66,11 @@ class Recipe(models.Model):
     CookingTime = models.IntegerField(default=0)  # Время готовки
     PortionCounter = models.IntegerField(default=1)  # Количество порций
 
-    CaloricContent = models.CharField(max_length=400)  # Калорийность
-    Squirrels = models.CharField(max_length=400)  # Белки
-    Fats = models.CharField(max_length=400)  # Жиры
-    Carbohydrates = models.CharField(max_length=400)  # Углеводы
-    Water = models.CharField(max_length=400)  # Вода
+    CaloricContent = models.CharField(max_length=400, null=True, blank=True)  # Калорийность
+    Squirrels = models.CharField(max_length=400, null=True, blank=True)  # Белки
+    Fats = models.CharField(max_length=400, null=True, blank=True)  # Жиры
+    Carbohydrates = models.CharField(max_length=400, null=True, blank=True)  # Углеводы
+    Water = models.CharField(max_length=400, null=True, blank=True)  # Вода
 
     CookingLevel = models.ForeignKey(CookingLevel, on_delete=models.PROTECT)  # Сложность готовки
     KitchenType = models.ForeignKey(KitchenType, on_delete=models.PROTECT)  # Тип кухни
