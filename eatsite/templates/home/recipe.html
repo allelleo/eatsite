@@ -36,14 +36,16 @@
                                                         target='_blank'
                                                         title='{{ SiteName }}'>{{ SiteName }}</a></span>
                                                 <span class="post-date published">{{ Recipe.published_date }}</span>
-                                                <span><i class="fa fa-eye">&nbsp;</i><span>{{ Recipe.views }}</span></span>
+                                                <span><i
+                                                        class="fa fa-eye">&nbsp;</i><span>{{ Recipe.views }}</span></span>
                                             {% else %}
                                                 <span class='post-author'><a
                                                         href='{{ Recipe.author_link }}'
                                                         target='_blank'
                                                         title='{{ Recipe.author_name }}'>{{ Recipe.author_name }}</a></span>
                                                 <span class="post-date published">{{ Recipe.published_date }}</span>
-                                                <span><i class="fa fa-eye">&nbsp;</i><span>{{ Recipe.views }}</span></span>
+                                                <span><i
+                                                        class="fa fa-eye">&nbsp;</i><span>{{ Recipe.views }}</span></span>
 
                                             {% endif %}
 
@@ -90,24 +92,34 @@
                                             </div>
                                         </div>
                                         <hr>
-                                    <br>
+                                        <br>
                                         <div class="post-labels">
                                             <div class="label-head Label">
-                                                <a class="label-link"
-                                                   rel="tag">Калории: {{ Recipe.CaloricContent }}
-                                                </a>
-                                               <a class="label-link"
-                                                   rel="tag">Белки: {{ Recipe.Squirrels }}
-                                                </a>
-                                                <a class="label-link"
-                                                   rel="tag">Жиры: {{ Recipe.Fats }}
-                                                </a>
-                                                <a class="label-link"
-                                                   rel="tag">Углеводы: {{ Recipe.Carbohydrates }}
-                                                </a>
-                                                <a class="label-link"
-                                                   rel="tag">Вода: {{ Recipe.Water }}
-                                                </a>
+                                                {% if Recipe.CaloricContent != "" %}
+                                                    <a class="label-link"
+                                                       rel="tag">Калории: {{ Recipe.CaloricContent }}
+                                                    </a>
+                                                {% endif %}
+                                                {% if Recipe.Squirrels != "" %}
+                                                    <a class="label-link"
+                                                       rel="tag">Белки: {{ Recipe.Squirrels }}
+                                                    </a>
+                                                {% endif %}
+                                                {% if Recipe.Fats != "" %}
+                                                    <a class="label-link"
+                                                       rel="tag">Жиры: {{ Recipe.Fats }}
+                                                    </a>
+                                                {% endif %}
+                                                {% if Recipe.Carbohydrates != "" %}
+                                                    <a class="label-link"
+                                                       rel="tag">Углеводы: {{ Recipe.Carbohydrates }}
+                                                    </a>
+                                                {% endif %}
+                                                {% if Recipe.Water != "" %}
+                                                    <a class="label-link"
+                                                       rel="tag">Вода: {{ Recipe.Water }}
+                                                    </a>
+                                                {% endif %}
                                             </div>
                                         </div>
                                     </div>
@@ -135,9 +147,12 @@
                         </div>
                         <div class='widget-content'>
                             <ul class='social-counter social social-color'>
-                                <li class='dzen'><a href='{{ Dzen }}' target='_blank' title='Ydzen'><img src="{% static 'images/HomePage/dzen.png' %}" alt=""></a></li>
-                                <li class='vkontakte'><a href='{{ Vk }}' target='_blank' title='Vk'><img src="{% static 'images/HomePage/vk.png' %}" alt=""></a></li>
-                                <li class='tg'><a href='{{ Tg }}' target='_blank' title='Telegram'><img src="{% static 'images/HomePage/tg.png' %}" alt=""></a></li>
+                                <li class='dzen'><a href='{{ Dzen }}' target='_blank' title='Ydzen'><img
+                                        src="{% static 'images/HomePage/dzen.png' %}" alt=""></a></li>
+                                <li class='vkontakte'><a href='{{ Vk }}' target='_blank' title='Vk'><img
+                                        src="{% static 'images/HomePage/vk.png' %}" alt=""></a></li>
+                                <li class='tg'><a href='{{ Tg }}' target='_blank' title='Telegram'><img
+                                        src="{% static 'images/HomePage/tg.png' %}" alt=""></a></li>
                             </ul>
                         </div>
                     </div>
