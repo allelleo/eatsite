@@ -19,6 +19,9 @@ class Home(View):
         return {
             'SiteName': HomeConfig.SiteName,
             'SiteLink': HomeConfig.SiteLink,
+            "Dzen": HomeConfig.DzenLink,
+            "Vk": HomeConfig.VkLink,
+            "Tg": HomeConfig.TelegramLink,
             "SalatRecipeCounter": 666,
             "FishRecipeCounter": 666,
             "ChickenRecipeCounter": 666,
@@ -65,6 +68,9 @@ class GetRecipe(View):
             "MostPopularRecipes": MostPopularRecipes,
             "AllCategories": AllCategories,
             "media": MEDIA_URL,
+            "Dzen": HomeConfig.DzenLink,
+            "Vk": HomeConfig.VkLink,
+            "Tg": HomeConfig.TelegramLink,
         }
 
     def get(self, request, slug, *args, **kwargs):
