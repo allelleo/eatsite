@@ -270,46 +270,7 @@
                         <div class='clearfix'></div>
                         <div class='blog-posts hfeed container index-post-wrap'>
                             <div class='grid-posts'>
-                                {% for RandomRecipe in RandomRecipeTwo %}
-                                    <div class='blog-post hentry index-post post-2'>
-                                    <div class='post-image-wrap'>
-                                        <a class='post-image-link'
-                                           href='recipe/{{ RandomRecipe.slug }}'>
-                                            <img alt='Healthy Daily Rutine For Your Healthy Lifestyle'
-                                                 class='post-thumb'
-                                                 src='{{ media }}{{ RandomRecipe.preview }}'/>
-                                        </a>
-                                    </div>
-                                    <div class='post-info'>
-                                        <a class='post-tag' href='recipe/{{ RandomRecipe.category.slug }}'>
-                                            {{ RandomRecipe.category.title }}
-                                        </a>
-                                    
-                                        <h2 class='post-title'>
-                                            <a href='recipe/{{ RandomRecipe.slug }}'>{{ RandomRecipe.title }}</a>
-                                        </h2>
-                                        <div class='index-post-footer'>
-                                            <p class='post-snippet'>{{ RandomRecipe.quote }}&#8230;</p>
-                                            <div class='post-meta'>
-                                                {% if RandomRecipe.author_name == 'SiteName' %}
-                                                <span class='post-author'><a
-                                                        href='{{ SiteLink }}'
-                                                        target='_blank'
-                                                        title='{{ SiteName }}'>{{ SiteName }}</a></span>
-                                                {% else %}
-                                                    <span class='post-author'><a
-                                                        href='{{ RandomRecipe.author_link }}'
-                                                        target='_blank'
-                                                        title='{{ RandomRecipe.author_name }}'>{{ RandomRecipe.author_name }}</a></span>
-                                                {% endif %}
-                                                <span class='post-date published'>{{ RandomRecipe.published_date }}</span>
-                                            </div>
-                                            <a class='read-more'
-                                               href='recipe/{{ RandomRecipe.slug }}'><span>Читать!</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endfor %}
+
                                 {% for LastRecipe in LastSixRecipes %}
                                     <div class='blog-post hentry index-post post-2'>
                                     <div class='post-image-wrap'>
